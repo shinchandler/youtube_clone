@@ -1,0 +1,87 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 40px;
+}
+
+.video-container {
+    cursor: pointer;
+}
+
+.thumbnail-row {
+    position: relative;
+    /* It will help the position:absolute (used below) to refer this container for it's positioning */
+    margin-bottom:2px;
+}
+
+
+.video-time {
+    background-color: rgba(0, 0, 0, 0.634);
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 12px;
+    position: absolute;
+    /* position:absolute works wrt to postioning inside page, but since we have position: relative in outer element it is refering that instead of page */
+    right: 8px;
+    bottom: 18px;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 40px 1fr 20px;
+    column-gap: 5px;
+    row-gap: 2px;
+}
+
+.profile-picture {
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+
+@media screen and (width <=1230px) {
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+}
+
+@media screen and (width <=856px) {
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+
+    body {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
